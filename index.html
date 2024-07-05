@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM - Enter Your Pin</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+        }
+    </style>
+</head>
+<body class="gradient-bg h-screen flex items-center justify-center">
+    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center" style="width: 400px;">
+        <h1 class="text-center text-4xl mb-8">Enter Your Pin</h1>
+        <input type="password" placeholder="Enter your 4 digit pin" id="pin" class="p-3 border border-gray-300 rounded-lg mb-4 text-center w-64">
+        <button type="button" onclick="btnPin()" id="btnPin" class="bg-blue-500 text-white px-6 py-3 rounded-lg text-lg hover:bg-blue-600 focus:outline-none">Go To Process</button>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM - Status</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-200 h-screen flex items-center justify-center">
+    <div class="container mx-auto p-6 bg-white rounded-lg shadow-lg">
+        <div class="flex justify-between mb-8">
+            <div class="box text-3xl green flex items-center justify-center text-white rounded-lg w-72 h-36 cursor-pointer bg-green-500 hover:bg-green-600" onclick="checkBalance()">
+                Check Balance
+            </div>
+            <div class="box text-3xl yellow flex items-center justify-center text-black rounded-lg w-72 h-36 cursor-pointer bg-yellow-500 hover:bg-yellow-600" onclick="goToWithdraw()">
+                Withdraw
+            </div>
+            <div class="box text-3xl red flex items-center justify-center text-white rounded-lg w-72 h-36 cursor-pointer bg-red-500 hover:bg-red-600" onclick="cancelTransaction()">
+                Cancel
+            </div>
+        </div>
+        <!-- Modal for Check Balance -->
+        <div class="modal hidden fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-gray-800 bg-opacity-75">
+            <div class="modal-content bg-white p-6 rounded-lg shadow-lg">
+                <p id="balAmnt" class="text-3xl font-bold text-center"></p>
+                <button class="mt-4 bg-red-500 text-white px-6 py-3 rounded-lg text-lg hover:bg-red-600 focus:outline-none" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
